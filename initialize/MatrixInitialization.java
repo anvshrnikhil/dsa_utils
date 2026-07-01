@@ -11,4 +11,34 @@ public class MatrixInitialization {
         return matrix;
     }
 
+    boolean[][] initialize(int rows, int cols, boolean defaultValue) {
+        boolean[][] matrix = new boolean[rows][cols];
+        for(int rowItr=0;rowItr<rows;rowItr++) {
+            for(int colItr=0;colItr<cols;colItr++) {
+                matrix[rowItr][colItr] = defaultValue;
+            }
+        }
+        return matrix;
+    }
+
+    void print(int[][] matrix) {
+        int rows = matrix.length, cols = matrix[0].length;
+        for(int rowItr=0;rowItr<rows;rowItr++) {
+            for(int colItr=0;colItr<cols;colItr++) {
+                System.out.print( matrix[rowItr][colItr] + " " );
+            }
+            System.out.println();
+        }
+    }
+
+    void print(boolean[][] matrix) {
+        int rows = matrix.length, cols = matrix[0].length;
+        for(int rowItr=0;rowItr<rows;rowItr++) {
+            for(int colItr=0;colItr<cols;colItr++) {
+                System.out.print( matrix[rowItr][colItr] + " " );
+            }
+            System.out.println();
+        }
+    }
+
 }
