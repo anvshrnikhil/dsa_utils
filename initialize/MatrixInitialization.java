@@ -41,4 +41,16 @@ public class MatrixInitialization {
         }
     }
 
+    List<List<Boolean>> initialize(int rows, int cols, boolean defaultValue) {
+        List<List<Boolean>> result = new ArrayList<>();
+        for(int i=0;i<rows;i++) {
+            List<Boolean> row = new ArrayList<>(cols); 
+            for(int j=0;j<cols;j++) {
+                row.add(false);
+            }
+            result.add(row);
+        }
+        return result;
+    }
+
 }
