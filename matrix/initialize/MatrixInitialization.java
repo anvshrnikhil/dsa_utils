@@ -11,6 +11,17 @@ public class MatrixInitialization {
         return matrix;
     }
 
+    int[][] duplicate(int[][] grid) {
+        int row = grid.length, col = grid[0].length;
+        int[][] result = new int[row][col];
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                result[i][j] = grid[i][j];
+            }
+        }
+        return result;
+    }
+
     boolean[][] initialize(int rows, int cols, boolean defaultValue) {
         boolean[][] matrix = new boolean[rows][cols];
         for(int rowItr=0;rowItr<rows;rowItr++) {
